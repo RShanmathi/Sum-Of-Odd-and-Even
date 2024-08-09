@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner s=new Scanner (System.in);
+        int num=s.nextInt();
+        int se=0;
+        int so=0;
+        String str=Integer.toString (num);
+        for(char ch:str.toCharArray()){
+            int d=Character.getNumericValue(ch);
+            if(d%2==0){
+                se+=d;
+            }
+            else{
+                so+=d;
+            }
+        }
+        System.out.println("Sum of Even="+se);
+        System.out.println("Sum of Odd="+so);
+    }
+}
